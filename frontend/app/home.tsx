@@ -20,9 +20,9 @@ import {
 const pattern = require('../assets/images/background2.png');
 
 const earIcon = require('../assets/images/ear.png');
-const handIcon = require('../assets/images/hand.png');
-const alertIcon = require('../assets/images/emergency.png');
-const bookmarkIcon = require('../assets/images/saved.png');
+const handIcon = require('../assets/images/hand1.png');
+const alertIcon = require('../assets/images/emergency1.png');
+const bookmarkIcon = require('../assets/images/bookmark.png');
 
 export default function HomeScreen() {
   const router = useRouter();
