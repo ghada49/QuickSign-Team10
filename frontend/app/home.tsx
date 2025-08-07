@@ -89,7 +89,7 @@ export default function HomeScreen() {
         ))}
 
         <View style={[styles.bottomNav, { flexDirection: isRTL ? 'row-reverse' : 'row' }]}>
-          <TouchableOpacity onPress={() => router.push('/faq')}>
+          <TouchableOpacity onPress={() => router.push('faq')}>
             <Ionicons name="help-circle-outline" size={wp('10%')} color="#fff" />
           </TouchableOpacity>
 

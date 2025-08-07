@@ -38,9 +38,7 @@ const SignUpScreen: React.FC = () => {
       >
         <Image source={logo} style={styles.logo} resizeMode="contain" />
 
-        <Text style={styles.title }>
-          {t('signup')}
-        </Text>
+        <Text style={styles.title}>{t('signup')}</Text>
 
         <TextInput
           style={[styles.input, { textAlign: isRTL ? 'right' : 'left' }]}
@@ -108,11 +106,10 @@ const SignUpScreen: React.FC = () => {
           secureTextEntry
         />
 
+        {/* Navigate to Home after sign up */}
         <TouchableOpacity
           style={styles.button}
-          onPress={() => {
-            // still missing as waiting backend
-          }}
+          onPress={() => router.push('/home')}
         >
           <Text style={styles.buttonText}>{t('createAccount')}</Text>
         </TouchableOpacity>

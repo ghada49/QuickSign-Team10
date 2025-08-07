@@ -21,17 +21,15 @@ const LoginScreen = () => {
 
       <Text style={styles.title}>{t('login')}</Text>
       
-
       <TextInput style={[styles.input, { textAlign: isRTL ? 'right' : 'left' }]} placeholder={t('email')} keyboardType="email-address" />
       <TextInput style={[styles.input,  { textAlign: isRTL ? 'right' : 'left' }]} placeholder={t('password')} secureTextEntry />
 
-      <TouchableOpacity style={styles.button}>
+      {/* Navigate to home after login */}
+      <TouchableOpacity style={styles.button} onPress={() => router.push('/home')}>
         <Text style={styles.buttonText}>{t('login')}</Text>
       </TouchableOpacity>
 
-
-
-        <Text style={styles.text}>
+      <Text style={styles.text}>
         {t('forgotPass')} {'\n '}
         <Text style={styles.link} onPress={() => router.push('/resetPassword')}>
           {t('resetPass')}
