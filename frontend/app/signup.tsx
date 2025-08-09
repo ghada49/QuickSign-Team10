@@ -1,3 +1,4 @@
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useRouter } from 'expo-router';
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -24,7 +25,34 @@ const SignUpScreen: React.FC = () => {
   const router = useRouter();
   const { t, i18n } = useTranslation();
   const isRTL = i18n.language === 'ar';
+
+  // State for input fields
+  const [fullName, setFullName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [phone, setPhone] = useState('');
   const [gender, setGender] = useState<'male' | 'female' | null>(null);
+
+  // Optionally, add a basic validation or feedback if you want
+
+  const handleSignUp = async () => {
+    // Simple validation (optional)
+    if (!fullName || !email || !password || !gender) {
+      alert(t('Please fill in all required fields.'));
+      return;
+    }
+    // Save user to AsyncStorage
+    const userData = {
+      username: email.split('@')[0],
+      name: fullName,
+      email,
+      password,
+      gender,
+      phone,
+    };
+    await AsyncStorage.setItem('user', JSON.stringify(userData));
+    router.push('/profile');
+  };
 
   return (
     <KeyboardAvoidingView
@@ -37,13 +65,14 @@ const SignUpScreen: React.FC = () => {
         keyboardShouldPersistTaps="handled"
       >
         <Image source={logo} style={styles.logo} resizeMode="contain" />
-
         <Text style={styles.title}>{t('signup')}</Text>
 
         <TextInput
           style={[styles.input, { textAlign: isRTL ? 'right' : 'left' }]}
           placeholder={t('fullName')}
           placeholderTextColor="#ccc"
+          value={fullName}
+          onChangeText={setFullName}
         />
 
         <View style={styles.genderContainer}>
@@ -97,6 +126,8 @@ const SignUpScreen: React.FC = () => {
           placeholder={t('email')}
           placeholderTextColor="#ccc"
           keyboardType="email-address"
+          value={email}
+          onChangeText={setEmail}
         />
 
         <TextInput
@@ -104,12 +135,21 @@ const SignUpScreen: React.FC = () => {
           placeholder={t('password')}
           placeholderTextColor="#ccc"
           secureTextEntry
+          value={password}
+          onChangeText={setPassword}
         />
 
-        {/* Navigate to Home after sign up */}
+        <TextInput
+          style={[styles.input, { textAlign: isRTL ? 'right' : 'left' }]}
+          placeholder={t('phoneNumber')}
+          placeholderTextColor="#ccc"
+          value={phone}
+          onChangeText={setPhone}
+        />
+
         <TouchableOpacity
           style={styles.button}
-          onPress={() => router.push('/home')}
+          onPress={handleSignUp}
         >
           <Text style={styles.buttonText}>{t('createAccount')}</Text>
         </TouchableOpacity>

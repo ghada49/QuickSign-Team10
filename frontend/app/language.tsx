@@ -9,7 +9,9 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import { RFPercentage } from 'react-native-responsive-fontsize';
+import {
+  RFPercentage,
+} from 'react-native-responsive-fontsize';
 import {
   heightPercentageToDP as hp,
   widthPercentageToDP as wp,

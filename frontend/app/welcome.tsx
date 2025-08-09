@@ -9,7 +9,9 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import { RFPercentage } from 'react-native-responsive-fontsize';
+import {
+  RFPercentage,
+} from 'react-native-responsive-fontsize';
 import {
   heightPercentageToDP as hp,
   widthPercentageToDP as wp,
@@ -46,6 +48,7 @@ const AuthScreen: React.FC = () => {
 
 export default AuthScreen;
 
+
 const styles = StyleSheet.create({
   gradient: {
     flex: 1,
@@ -67,17 +70,25 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center',
   },
-  button: {
-    backgroundColor: '#fff',
-    borderRadius: wp('3%'),
-    height: hp('8%'),                     
-    minWidth: wp('60%'),
-    alignSelf: 'center',
-    marginVertical: hp('2%'),
-    alignItems: 'center',
-    justifyContent: 'center',            
-    elevation: 10,
+  subtitle: {
+    fontSize: RFPercentage(2.5),
+    color: 'white',
+    textAlign: 'center',
+    marginBottom: hp('4%'),
   },
+button: {
+  backgroundColor: '#fff',
+  borderRadius: wp('3%'),
+  height: hp('8%'),                     
+  minWidth: wp('60%'),
+  alignSelf: 'center',
+  marginVertical: hp('2%'),
+  alignItems: 'center',
+  justifyContent: 'center',            
+  elevation: 10,
+},
+
+
   buttonText: {
     fontSize: RFPercentage(3),
     fontWeight: 'bold',

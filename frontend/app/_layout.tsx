@@ -1,9 +1,10 @@
-// frontend/app/_layout.tsx
-
 import { Stack } from 'expo-router';
-import '../i18n';
+import { ThemeProvider } from '../theme'; 
 
 export default function Layout() {
-  // An empty <Stack> will automatically pick up every .tsx in /app
-  return <Stack screenOptions={{ headerShown: false }} />;
+  return (
+    <ThemeProvider>
+      <Stack screenOptions={{ headerShown: false }} />
+    </ThemeProvider>
+  );
 }

@@ -1,7 +1,16 @@
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useRouter } from 'expo-router';
-import React from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import {
+  Image,
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
+  Alert,
+} from 'react-native';
 import { RFPercentage } from 'react-native-responsive-fontsize';
 import {
   heightPercentageToDP as hp,
@@ -15,29 +24,60 @@ const LoginScreen = () => {
   const { t, i18n } = useTranslation();
   const isRTL = i18n.language === 'ar';
 
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  // Handle login logic
+  const handleLogin = async () => {
+    const stored = await AsyncStorage.getItem('user');
+    if (!stored) {
+      Alert.alert(t('login'), t('No user found. Please sign up first.'));
+      return;
+    }
+    const savedUser = JSON.parse(stored);
+    if (email.trim().toLowerCase() === savedUser.email.trim().toLowerCase() && password === savedUser.password) {
+      // Optional: Save user again to refresh session if needed
+      await AsyncStorage.setItem('user', JSON.stringify(savedUser));
+      router.push('/profile');
+    } else {
+      Alert.alert(t('login'), t('Incorrect email or password.'));
+    }
+  };
+
   return (
     <View style={styles.container}>
       <Image source={logo} style={styles.logo} resizeMode="contain" />
-
       <Text style={styles.title}>{t('login')}</Text>
-      
-      <TextInput style={[styles.input, { textAlign: isRTL ? 'right' : 'left' }]} placeholder={t('email')} keyboardType="email-address" />
-      <TextInput style={[styles.input,  { textAlign: isRTL ? 'right' : 'left' }]} placeholder={t('password')} secureTextEntry />
 
-      {/* Navigate to home after login */}
-      <TouchableOpacity style={styles.button} onPress={() => router.push('/home')}>
+      <TextInput
+        style={[styles.input, { textAlign: isRTL ? 'right' : 'left' }]}
+        placeholder={t('email')}
+        keyboardType="email-address"
+        value={email}
+        onChangeText={setEmail}
+        autoCapitalize="none"
+      />
+      <TextInput
+        style={[styles.input, { textAlign: isRTL ? 'right' : 'left' }]}
+        placeholder={t('password')}
+        secureTextEntry
+        value={password}
+        onChangeText={setPassword}
+      />
+
+      <TouchableOpacity style={styles.button} onPress={handleLogin}>
         <Text style={styles.buttonText}>{t('login')}</Text>
       </TouchableOpacity>
 
       <Text style={styles.text}>
-        {t('forgotPass')} {'\n '}
+        {t('forgotPass')} {'\n'}
         <Text style={styles.link} onPress={() => router.push('/resetPassword')}>
           {t('resetPass')}
         </Text>
       </Text>
 
       <Text style={styles.text}>
-        {t('noAcc')} {'\n '}
+        {t('noAcc')}{' '}
         <Text style={styles.link} onPress={() => router.push('/signup')}>
           {t('signup')}
         </Text>
