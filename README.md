@@ -26,8 +26,6 @@
       - Dvelopment build: https://docs.expo.dev/develop/development-builds/introduction/
 
 ## Machine Learning Model:
-  The dataset used, KArSL Dataset, can be found on this link: https://hamzah-luqman.github.io/KArSL/
-  The model achieved a training accuracy of 93.32%, and a testing accuracy of 94.16%
   The dataset used, KArSL Dataset, can be found on this link: https://hamzah-luqman.github.io/KArSL/. It is composed of 3 signers performing the each the sign of every word 50 times. In total, we have 150 takes for each word, that are already split into two sections: a training dataset (42 takes per signer for each word, 126 in total) and a testing dataset (8 takes per signer for each word, 24 in total).
 
   The model achieved a training accuracy of 93.32%, and a testing accuracy of 94.16%.
