@@ -1,15 +1,16 @@
 ## To clone the repository
   ```bash
-      git clone ENEEDDD TO ADD THE LINK HERE BUT ITS PRIVATE NOW
+      git clone https://github.com/ghada49/QuickSign-Team10.git
       cd QuickSignTeam10
   ```
 ## Setting up the different parts of the project
   For each part of the project, (backend, frontend, model), first install the corresponding requirements which are integrated in a separate file specific to each part called requirements.txt.
   
-  ## In order to run the applicaiton:
+  ## To set up the backend
    - Sign in through the terminal of AWS to connect with the IAM user to be able to access AWS tools.
    - Download the older version of python specified in the requirements file present in the backend directory, and run ml.py using a separate environment
    - Run app.py
+  ## To run the frontend
    - Install npm in the command prompt:
      ```bash
      npm install
