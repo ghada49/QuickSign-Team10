@@ -1,3 +1,14 @@
+## Prerequisites
+- Python
+- Flask
+- React
+- Node.js
+- Expo
+- TensorFlow
+- MediaPipe
+- OpenCV-python
+
+
 ## To clone the repository
   ```bash
       git clone https://github.com/ghada49/QuickSign-Team10.git
