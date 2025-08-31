@@ -48,7 +48,7 @@
 
   The model achieved a training accuracy of 93.32%, and a testing accuracy of 94.16%.
   The model is present under the name Model - 93.32% Training Acc - 94.16% Testing Acc.h5.
-  The code for the model is present under the name Training Model Final. The training .npy files can be found on this OneDrive: [OneDrive Link](https://mailaub-my.sharepoint.com/:f:/g/personal/mas187_mail_aub_edu/Eo9ITMXVLopGskHlaDUiZHYBp729nYFlT3mcBJaBkJMqcA?e=bS6TVr). The cells can be run in order to train the model.
+  The code for the model is present under the name Training Model Final. The training .npy files can be found on this OneDrive: [OneDrive Link](https://mailaub-my.sharepoint.com/:f:/r/personal/mas187_mail_aub_edu/Documents/Quick%20Sign/Training%20Data%20npy%20files?csf=1&web=1&e=4B4iJd). The cells can be run in order to train the model.
 
 
   The words trained on are:
