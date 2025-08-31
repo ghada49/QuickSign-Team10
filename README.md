@@ -11,7 +11,7 @@
    - Download the older version of python specified in the requirements file present in the backend directory, and run ml.py using a separate environment
    - Run app.py
    - Install npm in the command prompt:
-    ```bash
+     ```bash
      npm install
      ```
    - To start the app: 
