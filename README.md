@@ -86,8 +86,17 @@
 | 293 | thanks | شكرا |
 ## Translation from text-to-sign
 
-The same dataset used for the model is also used here to create the avatars using the code found in the directory named Text to Sign.
-The code used to create the frames of avatars performing the sign language is present in the same directory, and 
+The same dataset used for the model is also used here to create the avatars using the code found in the directory named **Text to Sign**. The code used to create the frames of avatars performing the sign language is present in the same directory. To run the code successfully, complete the following setup steps:
+- The videos stored in our S3 bucket can also be found in this OneDrive:  
+  [OneDrive Link](https://mailaub-my.sharepoint.com/:f:/g/personal/mas187_mail_aub_edu/Eo9ITMXVLopGskHlaDUiZHYBp729nYFlT3mcBJaBkJMqcA?e=bS6TVr)
+- To set this up, create an S3 bucket with the following folder structure:  
+  ```bash
+  quicksign-media/videos/ar/video_name.mp4
+  ```
+- Download all the videos from the OneDrive link above and upload them into the ar folder of the S3 path:
+  ```bash
+  quicksign-media/videos/ar
+  ```
 The words present in the S3 bucket with their corresponding avatar videos are:
 
 | Word Number | English     | Arabic |
