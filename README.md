@@ -2,12 +2,13 @@
 - Python
 - Flask
 - React
+- boto3
 - Node.js
 - Expo
 - TensorFlow
 - MediaPipe
 - OpenCV-python
-
+- npm
 
 ## To clone the repository
   ```bash
