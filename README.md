@@ -17,13 +17,13 @@
   ```
 ## Setting up the different parts of the project
   For each part of the project, (backend, frontend, model), first install the corresponding requirements which are integrated in a separate file specific to each part called requirements.txt.
-  
+  The three different parts must be running all at same time.
   ## To set up the backend
-  1. Setting up environment for ml.py:
+  1. Setting up environment for ml.py (in ml_microservice folder):
      - Create a virtual environment with Python 3.10.18
      - Install the dependencies from requirements.txt in the backend directory
      - Run ml.py inside this environment
-  2. Setting up environment for app.py:
+  2. Setting up environment for app.py (in Backend folder):
      - Install the dependencies from requirements.txt (on a separate environment)
      - Run app.py
      - Backend APIs are accessible at http://localhost:5000
