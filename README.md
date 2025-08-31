@@ -30,6 +30,8 @@
   The dataset used, KArSL Dataset, can be found on this link: https://hamzah-luqman.github.io/KArSL/. It is composed of 3 signers performing the each the sign of every word 50 times. In total, we have 150 takes for each word, that are already split into two sections: a training dataset (42 takes per signer for each word, 126 in total) and a testing dataset (8 takes per signer for each word, 24 in total).
 
   The model achieved a training accuracy of 93.32%, and a testing accuracy of 94.16%.
+  The model is present under the name Model - 93.32% Training Acc - 94.16% Testing Acc.h5.
+  The code for the model is present under the name Training Model Final. The cells can be run in order to train the model.
 
 
   The words trained on are:
@@ -67,7 +69,8 @@
 | 293 | thanks | شكرا |
 ## Translation from text-to-sign
 
-The same dataset used for the model is also used here to create the avatars using the code found in the directory named Text to Sign. 
+The same dataset used for the model is also used here to create the avatars using the code found in the directory named Text to Sign.
+The code used to create the frames of avatars performing the sign language is present in the same directory, and 
 The words present in the S3 bucket with their corresponding avatar videos are:
 
 | Word Number | English     | Arabic |
