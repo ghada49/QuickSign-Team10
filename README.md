@@ -1,6 +1,6 @@
 ## To clone the repository
   ```bash
-      git clone https://github.com/yourusername/flutterforecast.git
+      git clone ENEEDDD TO ADD THE LINK HERE BUT ITS PRIVATE NOW
       cd QuickSignTeam10
   ```
 ## Setting up the different parts of the project
