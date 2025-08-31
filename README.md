@@ -32,11 +32,12 @@
      ```bash
      npx expo start
      ```
-   - When the output appears, you will receive the option to run the application on different operating systems:
+   - When the output appears, you will receive the option to run the application on different operating systems: 
       -  Android emulator:  https://docs.expo.dev/workflow/android-studio-emulator/
       - iOS emulator: https://docs.expo.dev/workflow/ios-simulator/
       - Expo Go, a sandbox for trying out app development with Expo: https://expo.dev/go
-      - Dvelopment build: https://docs.expo.dev/develop/development-builds/introduction/
+      - Development build: https://docs.expo.dev/develop/development-builds/introduction/
+     In case the size is not correct when being run on the web (as the application is built to run on mobile) inspect, then refresh to get the correct size of the frontend)
 
 ## Machine Learning Model:
   The dataset used, KArSL Dataset, can be found on this link: https://hamzah-luqman.github.io/KArSL/. It is composed of 3 signers performing the each the sign of every word 50 times. In total, we have 150 takes for each word, that are already split into two sections: a training dataset (42 takes per signer for each word, 126 in total) and a testing dataset (8 takes per signer for each word, 24 in total).
