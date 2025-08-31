@@ -82,7 +82,7 @@
 | 260 | heavy | ثقيل |
 | 287 | left | يسار |
 | 288 | right | يمين |
-| 289 | welcome | أهلا وسهلا |
+| 289 | welcome | مرحبا|
 | 293 | thanks | شكرا |
 ## Translation from text-to-sign
 
