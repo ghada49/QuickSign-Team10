@@ -22,6 +22,7 @@
    - Sign in through the terminal of AWS to connect with the IAM user to be able to access AWS tools.
    - Download the older version of python specified in the requirements file present in the backend directory, and run ml.py using a separate environment
    - Run app.py
+   - Backend APIs are accessible at http://localhost:5000.
   ## To run the frontend
    - Install npm in the command prompt:
      ```bash
