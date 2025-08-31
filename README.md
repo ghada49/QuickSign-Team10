@@ -87,6 +87,7 @@
 ## Translation from text-to-sign
 
 The same dataset used for the model is also used here to create the avatars using the code found in the directory named **Text to Sign**. The code used to create the frames of avatars performing the sign language is present in the same directory. To run the code successfully, complete the following setup steps:
+- Install the dependencies from requirements.txt in this directory before running the code
 - The videos stored in our S3 bucket can also be found in this OneDrive:  
   [OneDrive Link](https://mailaub-my.sharepoint.com/:f:/g/personal/mas187_mail_aub_edu/Eo9ITMXVLopGskHlaDUiZHYBp729nYFlT3mcBJaBkJMqcA?e=bS6TVr)
 - To set this up, create an S3 bucket with the following folder structure:  
